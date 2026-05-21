@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🇵🇸 FreeMediaKit
 
-## Getting Started
+FreeMediaKit is an open-source, single-page web platform designed to provide free, high-quality, and print-ready visual assets for Palestine activists and demonstrators worldwide. 
 
-First, run the development server:
+The project aims to centralize protest posters, banners, and social media graphics, making them easily accessible in multiple dimensions and formats.
 
+👉 **Live Demo:** [https://freemediakit.vercel.app](https://freemediakit.vercel.app) *(Replace with your actual Vercel link)*
+
+---
+
+## 🚀 Features
+
+- **Single-Page Architecture:** Lightweight, ultra-fast, and highly responsive user experience.
+- **Categorized Visuals:** Easily filter through Posters (A3/A4), Banners, and Social Media assets.
+- **Print-Ready Dimensions:** High-quality previews showing exact dimensions for physical printing.
+- **Palestine Flag Palette:** A dark-themed modern UI designed around the symbolic colors: Emerald Green, Crimson Red, Black, and White.
+- **Future-Proof Structure:** Data-driven architecture using a single mock JSON file, ready to scale into a dynamic database in the future.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js (React)
+- **Styling:** Tailwind CSS
+- **Deployment:** Vercel
+
+---
+
+## 💻 Getting Started
+
+To run this project locally, follow these simple steps:
+
+### 1. Clone the Repository
 ```bash
+git clone [https://github.com/shazam2415/freemediakit.git](https://github.com/shazam2415/freemediakit.git)
+cd freemediakit
+2. Install Dependencies
+Bash
+npm install
+# or
+yarn install
+3. Run the Development Server
+Bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open http://localhost:3000 with your browser to see the result.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📂 Project Structure
+Plaintext
+freemediakit/
+├── src/
+│   ├── app/
+│   │   ├── layout.js     # Global layout and metadata
+│   │   └── page.js       # Main application page with filter & grid
+│   └── data/
+│       └── mockData.json # Mock data file for assets registry
+├── public/               # Static assets & placeholder previews
+└── package.json          # Project dependencies and scripts
+🎨 How to Contribute
+This project is built with global solidarity in mind. There are two ways you can contribute:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+For Designers (Submit Art)
+If you want to add your own designs to the catalog, please click the "Submit Design" button on the live website or open an issue with your high-res file links (PDF, SVG, or PNG).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+For Developers
+Fork the repository.
 
-## Learn More
+Create a new branch (git checkout -b feature/AmazingFeature).
 
-To learn more about Next.js, take a look at the following resources:
+Commit your changes (git commit -m 'Add some AmazingFeature').
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Push to the branch (git push origin feature/AmazingFeature).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Open a Pull Request.
 
-## Deploy on Vercel
+📝 License
+Distributed under the MIT License. See LICENSE for more information. All assets provided on this platform are intended for public domain/activism use.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Dosyayı kaydedip GitHub'a göndermek için terminalde şu komutları sırasıyla çalıştırabilirsin:
+
+```bash
+git add README.md
+git commit -m "docs: add comprehensive README"
+git push
