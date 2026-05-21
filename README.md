@@ -49,7 +49,7 @@ yarn dev
 ```
 ### Open http://localhost:3000 with your browser to see the result.
 
-📂 Project Structure
+### Project Structure
 ```Plaintext
 freemediakit/
 ├── src/
@@ -61,7 +61,7 @@ freemediakit/
 ├── public/               # Static assets & placeholder previews
 └── package.json          # Project dependencies and scripts
 ```
-### 🎨 How to Contribute
+### How to Contribute
 This project is built with global solidarity in mind. There are two ways you can contribute:
 
 For Designers (Submit Art)
@@ -78,14 +78,5 @@ Push to the branch (git push origin feature/AmazingFeature).
 
 Open a Pull Request.
 
-### 📝 License
+### License
 Distributed under the MIT License. See LICENSE for more information. All assets provided on this platform are intended for public domain/activism use.
-
-
-Dosyayı kaydedip GitHub'a göndermek için terminalde şu komutları sırasıyla çalıştırabilirsin:
-
-```bash
-git add README.md
-git commit -m "docs: add comprehensive README"
-git push
-```
