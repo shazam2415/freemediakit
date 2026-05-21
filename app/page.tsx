@@ -1,44 +1,11 @@
 "use client";
 import { useState } from "react";
-// Gerçek projede bunu üstteki klasörden import edebilirsin:
-// import mockData from "@/data/mockData.json";
-
-const mockData = [
-  {
-    id: 1,
-    title: "Free Palestine Protest Poster",
-    category: "posters",
-    language: "en",
-    designer: "AktivistDesign",
-    previewUrl: "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?q=80&w=400&auto=format&fit=crop", // Örnek görsel yeri
-    downloadUrl: "#",
-    dimensions: "A3 / A4"
-  },
-  {
-    id: 2,
-    title: "Filistin İçin Yürüyüş Dövizi",
-    category: "banners",
-    language: "tr",
-    designer: "Anonim",
-    previewUrl: "https://images.unsplash.com/photo-1628157582853-a796fa650a6a?q=80&w=400&auto=format&fit=crop",
-    downloadUrl: "#",
-    dimensions: "100x70 cm"
-  },
-  {
-    id: 3,
-    title: "Ceasefire Now Instagram Square",
-    category: "social",
-    language: "en",
-    designer: "GlobalVoice",
-    previewUrl: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400&auto=format&fit=crop",
-    downloadUrl: "#",
-    dimensions: "1080x1080 px"
-  }
-];
+import mockData from "../data/mockData.json"; // JSON bağlantısı burada
 
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
+  // Filtreleme mantığı
   const filteredAssets = selectedCategory === "all" 
     ? mockData 
     : mockData.filter(asset => asset.category === selectedCategory);
@@ -56,7 +23,7 @@ export default function Home() {
             </span>
           </div>
           <a 
-            href="https://tally.so" // İleride Google Forms veya Tally linkin gelecek
+            href="https://tally.so" 
             target="_blank"
             className="px-4 py-2 text-sm font-medium border border-zinc-700 hover:border-red-500 rounded-lg transition-colors text-zinc-300 hover:text-white"
           >
@@ -82,22 +49,27 @@ export default function Home() {
         </button>
       </section>
 
-      {/* 3. Filter Bar & Grid (Main Content) */}
+      {/* 3. Filter Bar & Grid */}
       <main id="explore" className="max-w-6xl mx-auto px-4 py-12 scroll-mt-16">
         
-        {/* Filter Buttons */}
+        {/* Seçenek A'ya göre güncellenmiş Filtre Butonları */}
         <div className="flex flex-wrap gap-2 justify-center mb-12 border-b border-zinc-800 pb-6">
-          {["all", "posters", "banners", "social"].map((category) => (
+          {[
+            { id: "all", label: "ALL" },
+            { id: "posters", label: "POSTERS & BANNERS" },
+            { id: "social", label: "SOCIAL MEDIA" },
+            { id: "stickers", label: "STICKERS & PRINTS" }
+          ].map((cat) => (
             <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
+              key={cat.id}
+              onClick={() => setSelectedCategory(cat.id)}
               className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
-                selectedCategory === category
+                selectedCategory === cat.id
                   ? "bg-white text-zinc-950 font-semibold shadow"
                   : "bg-zinc-900 text-zinc-400 hover:bg-zinc-800 hover:text-white"
               }`}
             >
-              {category.toUpperCase()}
+              {cat.label}
             </button>
           ))}
         </div>
@@ -109,7 +81,6 @@ export default function Home() {
               key={asset.id} 
               className="group bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden flex flex-col hover:border-zinc-700 transition-all"
             >
-              {/* Image Preview Container */}
               <div className="aspect-[4/5] bg-zinc-950 relative overflow-hidden">
                 <img 
                   src={asset.previewUrl} 
@@ -121,7 +92,6 @@ export default function Home() {
                 </span>
               </div>
 
-              {/* Info & Download */}
               <div className="p-5 flex flex-col flex-grow justify-between gap-4">
                 <div>
                   <h3 className="font-bold text-lg leading-snug group-hover:text-emerald-400 transition-colors">
@@ -134,6 +104,7 @@ export default function Home() {
                 
                 <a
                   href={asset.downloadUrl}
+                  download
                   className="w-full py-2.5 bg-zinc-800 group-hover:bg-red-600 text-center text-sm font-semibold rounded-lg transition-colors flex items-center justify-center gap-2"
                 >
                   Download Asset
@@ -148,7 +119,7 @@ export default function Home() {
         )}
       </main>
 
-      {/* 4. CTA / Footer */}
+      {/* 4. Footer */}
       <footer className="border-t border-zinc-900 bg-zinc-950 py-12 mt-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl font-bold mb-3">Are you a visual storyteller?</h2>

@@ -1,4 +1,4 @@
-# 🇵🇸 FreeMediaKit
+# FreeMediaKit
 
 FreeMediaKit is an open-source, single-page web platform designed to provide free, high-quality, and print-ready visual assets for Palestine activists and demonstrators worldwide. 
 
@@ -8,7 +8,7 @@ The project aims to centralize protest posters, banners, and social media graphi
 
 ---
 
-## 🚀 Features
+## Features
 
 - **Single-Page Architecture:** Lightweight, ultra-fast, and highly responsive user experience.
 - **Categorized Visuals:** Easily filter through Posters (A3/A4), Banners, and Social Media assets.
