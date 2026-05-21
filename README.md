@@ -4,7 +4,7 @@ FreeMediaKit is an open-source, single-page web platform designed to provide fre
 
 The project aims to centralize protest posters, banners, and social media graphics, making them easily accessible in multiple dimensions and formats.
 
-👉 **Live Demo:** [https://freemediakit.vercel.app](https://freemediakit.vercel.app) *(Replace with your actual Vercel link)*
+👉 **Live Demo:** [https://freemediakit.vercel.app](https://freemediakit.vercel.app)
 
 ---
 
@@ -34,20 +34,23 @@ To run this project locally, follow these simple steps:
 ```bash
 git clone [https://github.com/shazam2415/freemediakit.git](https://github.com/shazam2415/freemediakit.git)
 cd freemediakit
-2. Install Dependencies
-Bash
+```
+### 2. Clone Install Dependencies
+```Bash
 npm install
 # or
 yarn install
-3. Run the Development Server
-Bash
+```
+### 3. Run the Development Server
+```Bash
 npm run dev
 # or
 yarn dev
-Open http://localhost:3000 with your browser to see the result.
+```
+### Open http://localhost:3000 with your browser to see the result.
 
 📂 Project Structure
-Plaintext
+```Plaintext
 freemediakit/
 ├── src/
 │   ├── app/
@@ -57,7 +60,8 @@ freemediakit/
 │       └── mockData.json # Mock data file for assets registry
 ├── public/               # Static assets & placeholder previews
 └── package.json          # Project dependencies and scripts
-🎨 How to Contribute
+```
+### 🎨 How to Contribute
 This project is built with global solidarity in mind. There are two ways you can contribute:
 
 For Designers (Submit Art)
@@ -74,7 +78,7 @@ Push to the branch (git push origin feature/AmazingFeature).
 
 Open a Pull Request.
 
-📝 License
+### 📝 License
 Distributed under the MIT License. See LICENSE for more information. All assets provided on this platform are intended for public domain/activism use.
 
 
@@ -84,3 +88,4 @@ Dosyayı kaydedip GitHub'a göndermek için terminalde şu komutları sırasıyl
 git add README.md
 git commit -m "docs: add comprehensive README"
 git push
+```
